@@ -1,0 +1,436 @@
+/* Enhanced text response styles */
+.message-content {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.message-content h1,
+.message-content h2,
+.message-content h3,
+.message-content h4,
+.message-content h5,
+.message-content h6 {
+  font-weight: 600;
+  margin: 16px 0 8px 0;
+  color: #1a1a1a;
+}
+
+.dark .message-content h1,
+.dark .message-content h2,
+.dark .message-content h3,
+.dark .message-content h4,
+.dark .message-content h5,
+.dark .message-content h6 {
+  color: #ffffff;
+}
+
+.message-content h1 { font-size: 18px; }
+.message-content h2 { font-size: 16px; }
+.message-content h3 { font-size: 15px; }
+.message-content h4 { font-size: 14px; }
+
+.message-content p {
+  margin: 8px 0;
+  text-align: justify;
+}
+
+.message-content ul,
+.message-content ol {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.message-content li {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.message-content ul li {
+  list-style-type: disc;
+}
+
+.message-content ol li {
+  list-style-type: decimal;
+}
+
+.message-content li::marker {
+  color: #3b82f6;
+}
+
+.dark .message-content li::marker {
+  color: #60a5fa;
+}
+
+.message-content strong,
+.message-content b {
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.dark .message-content strong,
+.dark .message-content b {
+  color: #93c5fd;
+}
+
+.message-content em,
+.message-content i {
+  font-style: italic;
+  color: #059669;
+}
+
+.dark .message-content em,
+.dark .message-content i {
+  color: #6ee7b7;
+}
+
+.message-content code {
+  background-color: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+  color: #dc2626;
+  border: 1px solid #e5e7eb;
+}
+
+.dark .message-content code {
+  background-color: #374151;
+  color: #fca5a5;
+  border-color: #4b5563;
+}
+
+.message-content pre {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  overflow-x: auto;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.dark .message-content pre {
+  background-color: #1e293b;
+  border-color: #475569;
+}
+
+.message-content pre code {
+  background: none;
+  padding: 0;
+  border: none;
+  color: inherit;
+}
+
+.message-content blockquote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 16px;
+  margin: 16px 0;
+  font-style: italic;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border-radius: 0 6px 6px 0;
+  padding: 12px 16px;
+}
+
+.dark .message-content blockquote {
+  border-left-color: #60a5fa;
+  color: #9ca3af;
+  background-color: #111827;
+}
+
+.message-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+  font-size: 13px;
+}
+
+.message-content th,
+.message-content td {
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.dark .message-content th,
+.dark .message-content td {
+  border-color: #4b5563;
+}
+
+.message-content th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.dark .message-content th {
+  background-color: #374151;
+}
+
+.message-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 20px 0;
+}
+
+.dark .message-content hr {
+  border-top-color: #4b5563;
+}
+
+/* Special formatting for key-value content */
+.message-content .highlight-section {
+  background-color: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  padding: 12px 16px;
+  margin: 12px 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.dark .message-content .highlight-section {
+  background-color: #1e3a8a;
+  background-color: rgba(30, 58, 138, 0.1);
+}
+
+/* Links */
+.message-content a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dark .message-content a {
+  color: #60a5fa;
+}
+
+.message-content a:hover {
+  color: #1d4ed8;
+}
+
+.dark .message-content a:hover {
+  color: #93c5fd;
+}
+
+/* Copy button for code blocks */
+.code-block-container {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.code-block-container:hover .copy-button {
+  opacity: 1;
+}
+
+.copy-button:hover {
+  background-color: #374151;
+}
+
+/* Syntax highlighting overrides for better integration */
+.message-content .token.comment,
+.message-content .token.prolog,
+.message-content .token.doctype,
+.message-content .token.cdata {
+  color: #6b7280;
+}
+
+.dark .message-content .token.comment,
+.dark .message-content .token.prolog,
+.dark .message-content .token.doctype,
+.dark .message-content .token.cdata {
+  color: #9ca3af;
+}
+
+.message-content .token.punctuation {
+  color: #374151;
+}
+
+.dark .message-content .token.punctuation {
+  color: #d1d5db;
+}
+
+.message-content .token.property,
+.message-content .token.tag,
+.message-content .token.constant,
+.message-content .token.symbol,
+.message-content .token.deleted {
+  color: #dc2626;
+}
+
+.dark .message-content .token.property,
+.dark .message-content .token.tag,
+.dark .message-content .token.constant,
+.dark .message-content .token.symbol,
+.dark .message-content .token.deleted {
+  color: #f87171;
+}
+
+.message-content .token.boolean,
+.message-content .token.number {
+  color: #ea580c;
+}
+
+.dark .message-content .token.boolean,
+.dark .message-content .token.number {
+  color: #fb923c;
+}
+
+.message-content .token.selector,
+.message-content .token.attr-name,
+.message-content .token.string,
+.message-content .token.char,
+.message-content .token.builtin,
+.message-content .token.inserted {
+  color: #059669;
+}
+
+.dark .message-content .token.selector,
+.dark .message-content .token.attr-name,
+.dark .message-content .token.string,
+.dark .message-content .token.char,
+.dark .message-content .token.builtin,
+.dark .message-content .token.inserted {
+  color: #34d399;
+}
+
+.message-content .token.operator,
+.message-content .token.entity,
+.message-content .token.url,
+.message-content .language-css .token.string,
+.message-content .style .token.string {
+  color: #0891b2;
+}
+
+.dark .message-content .token.operator,
+.dark .message-content .token.entity,
+.dark .message-content .token.url,
+.dark .message-content .language-css .token.string,
+.dark .message-content .style .token.string {
+  color: #22d3ee;
+}
+
+.message-content .token.atrule,
+.message-content .token.attr-value,
+.message-content .token.keyword {
+  color: #7c3aed;
+}
+
+.dark .message-content .token.atrule,
+.dark .message-content .token.attr-value,
+.dark .message-content .token.keyword {
+  color: #a78bfa;
+}
+
+.message-content .token.function,
+.message-content .token.class-name {
+  color: #db2777;
+}
+
+.dark .message-content .token.function,
+.dark .message-content .token.class-name {
+  color: #f472b6;
+}
+
+/* Better spacing for ReactMarkdown components */
+.message-content > *:first-child {
+  margin-top: 0;
+}
+
+.message-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Improve readability of lists */
+.message-content ul > li,
+.message-content ol > li {
+  margin: 6px 0;
+  padding-left: 4px;
+}
+
+.message-content ul ul,
+.message-content ol ol,
+.message-content ul ol,
+.message-content ol ul {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* Scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Animation for message appearance */
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-bubble {
+  animation: messageSlideIn 0.3s ease-out;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .message-content {
+    font-size: 13px;
+  }
+  
+  .message-content h1 { font-size: 16px; }
+  .message-content h2 { font-size: 15px; }
+  .message-content h3 { font-size: 14px; }
+  .message-content h4 { font-size: 13px; }
+  
+  .message-content pre {
+    padding: 12px;
+    font-size: 12px;
+  }
+  
+  .message-content code {
+    font-size: 12px;
+  }
+}
